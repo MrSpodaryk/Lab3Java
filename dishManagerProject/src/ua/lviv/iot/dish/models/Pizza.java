@@ -3,6 +3,7 @@ package ua.lviv.iot.dish.models;
 public class Pizza extends Dish {
 
     private Size size;
+    
     private StyleOfDough styleOfDough;
 
     public Pizza() {
@@ -34,7 +35,5 @@ public class Pizza extends Dish {
         return "Pizza [typeOfMenu=" + getTypeOfMenu() + ", currency=" + getCurrency() + ", price=" + getPrice() + ", name=" + getName()
         + ", temperature=" + getTemperature() + ", weigh=" + getWeigh() + ", levelOfSpicy=" + getLevelOfSpicy() + "]";
 
-    }
-
-    
+    }  
 }

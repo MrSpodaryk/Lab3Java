@@ -24,8 +24,5 @@ public class Sushi extends Dish {
     public String toString() {
         return "Sushi [typeOfMenu=" + getTypeOfMenu() + ", currency=" + getCurrency() + ", price=" + getPrice() + ", name=" + getName()
         + ", temperature=" + getTemperature() + ", weigh=" + getWeigh() + ", levelOfSpicy=" + getLevelOfSpicy() + "]";
-
     }
-
-    
 }

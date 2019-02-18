@@ -13,7 +13,6 @@ import ua.lviv.iot.dish.models.Dish;
 public class Main {
 
     public Main() {
-        // TODO Auto-generated constructor stub
     }
 
     public static void main(String[] args) {
@@ -22,11 +21,13 @@ public class Main {
 
         Pizza peperoni = new Pizza(TypeOfMenu.CHILD_MENU, "грн", 200, "Peperoni", Temperature.HOT, 450,
                 LevelOfSpicy.LOW);
+        
         Pizza diablo = new Pizza(TypeOfMenu.STANDART_MENU, "грн", 250, "Diablo", Temperature.HOT, 420,
                 LevelOfSpicy.EXTREME);
 
         Sushi nori = new Sushi(TypeOfMenu.STANDART_MENU, "грн", 150, "Nori", Temperature.COLD, 120,
                 LevelOfSpicy.NOT_SPICY);
+        
         Sushi california = new Sushi(TypeOfMenu.STANDART_MENU, "грн", 150, "California", Temperature.COLD, 320,
                 LevelOfSpicy.NOT_SPICY);
 
@@ -41,7 +42,6 @@ public class Main {
         milk.setWeigh(212);
         milk.setPrice(50);
         milk.setCurrency("грн");
-
         
         List<Dish> newDishList = new ArrayList<>();
         newDishList.add(peperoni);

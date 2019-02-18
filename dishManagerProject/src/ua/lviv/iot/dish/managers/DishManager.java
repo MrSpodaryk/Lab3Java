@@ -10,8 +10,7 @@ public class DishManager  {
     
     private List<Dish> dishes = new ArrayList<>();
     
-    public DishManager() {
-        
+    public DishManager() { 
     }
     
     public DishManager(List<Dish> dishes) {

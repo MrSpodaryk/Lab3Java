@@ -7,7 +7,6 @@ public class Drinks extends Dish {
     private boolean presenceOfLactose;
 
     public Drinks() {
-
     }
 
     public Drinks(TypeOfMenu typeOfMenu, String currency, double price, String name, Temperature temperature,
@@ -44,6 +43,4 @@ public class Drinks extends Dish {
         return "Drinks [typeOfMenu=" + getTypeOfMenu() + ", currency=" + getCurrency() + ", price=" + getPrice() + ", name=" + getName()
                 + ", temperature=" + getTemperature() + ", weigh=" + getWeigh() + ", levelOfSpicy=" + getLevelOfSpicy() + "]";
     }
-
-    
 }

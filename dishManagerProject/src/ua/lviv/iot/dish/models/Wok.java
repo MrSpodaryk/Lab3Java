@@ -42,7 +42,5 @@ public class Wok extends Dish {
     public String toString() {
         return "Wok [typeOfMenu=" + getTypeOfMenu() + ", currency=" + getCurrency() + ", price=" + getPrice() + ", name=" + getName()
         + ", temperature=" + getTemperature() + ", weigh=" + getWeigh() + ", levelOfSpicy=" + getLevelOfSpicy() + "]";
-
     }
-
 }

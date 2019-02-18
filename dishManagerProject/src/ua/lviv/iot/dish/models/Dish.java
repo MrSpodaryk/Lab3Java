@@ -1,6 +1,6 @@
 package ua.lviv.iot.dish.models;
 
-public abstract class Dish {
+public class Dish {
 
     private TypeOfMenu typeOfMenu;
     private String currency;
@@ -11,7 +11,6 @@ public abstract class Dish {
     private LevelOfSpicy levelOfSpicy;
 
     public Dish() {
-
     }
 
     public Dish(TypeOfMenu typeOfMenu, String currency, double price, String name, Temperature temperature,
@@ -86,5 +85,7 @@ public abstract class Dish {
         return "Dish [typeOfMenu=" + typeOfMenu + ", currency=" + currency + ", price=" + price + ", name=" + name
                 + ", temperature=" + temperature + ", weigh=" + weigh + ", levelOfSpicy=" + levelOfSpicy + "]";
     }
+    
+    
 
 }

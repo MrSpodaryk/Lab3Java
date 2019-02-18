@@ -29,5 +29,12 @@ public class Pizza extends Dish {
         this.styleOfDough = styleOfDough;
     }
 
+    @Override
+    public String toString() {
+        return "Pizza [typeOfMenu=" + getTypeOfMenu() + ", currency=" + getCurrency() + ", price=" + getPrice() + ", name=" + getName()
+        + ", temperature=" + getTemperature() + ", weigh=" + getWeigh() + ", levelOfSpicy=" + getLevelOfSpicy() + "]";
+
+    }
+
     
 }

@@ -39,4 +39,11 @@ public class Drinks extends Dish {
         this.presenceOfLactose = presenceOfLactose;
     }
 
+    @Override
+    public String toString() {
+        return "Drinks [typeOfMenu=" + getTypeOfMenu() + ", currency=" + getCurrency() + ", price=" + getPrice() + ", name=" + getName()
+                + ", temperature=" + getTemperature() + ", weigh=" + getWeigh() + ", levelOfSpicy=" + getLevelOfSpicy() + "]";
+    }
+
+    
 }

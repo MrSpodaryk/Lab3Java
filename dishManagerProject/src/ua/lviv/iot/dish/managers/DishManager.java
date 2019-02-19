@@ -14,7 +14,7 @@ public class DishManager  {
     }
     
     public DishManager(List<Dish> dishes) {
-        this.dishes = dishes;
+        this.setDishes(dishes);
     }
     
     public List<Dish> findDishByTypeOfMenu(List<Dish> dishes, TypeOfMenu typeOfMenu){
@@ -42,5 +42,13 @@ public class DishManager  {
     public List<Dish> sortDishByDecreaseWeigh(List<Dish> dishes) {
         dishes.sort((o1, o2) -> (int)o2.getWeigh() - (int)o1.getWeigh());
         return dishes;
+    }
+
+    public List<Dish> getDishes() {
+        return dishes;
+    }
+
+    public void setDishes(List<Dish> dishes) {
+        this.dishes = dishes;
     }
 }

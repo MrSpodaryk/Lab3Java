@@ -34,6 +34,7 @@ public class Main {
         Drinks milk = new Drinks();
         milk.setName("Milk");
         milk.setLevelOfSpicy(LevelOfSpicy.NOT_SPICY);
+        milk.setCapacity(100.0);
         milk.setPresenceOfCaffeine(false);
         milk.setTypeOfMenu(TypeOfMenu.CHILD_MENU);
         milk.setTemperature(Temperature.NORMAL);

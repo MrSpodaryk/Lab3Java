@@ -17,10 +17,10 @@ public class Drinks extends Dish {
     public double getCapacity() {
         return capacity;
     }
-/*
+
     public void setCapacity(double capacity) {
         this.capacity = capacity;
-    }*/
+    }
 
     public boolean isPresenceOfCaffeine() {
         return presenceOfCaffeine;

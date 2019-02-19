@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import ua.lviv.iot.dish.models.*;
 
 public class DishManager  {
-    
+   
     private List<Dish> dishes = new ArrayList<>();
     
     public DishManager() { 
@@ -43,6 +43,4 @@ public class DishManager  {
         dishes.sort((o1, o2) -> (int)o2.getWeigh() - (int)o1.getWeigh());
         return dishes;
     }
-
-    
 }

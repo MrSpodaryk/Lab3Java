@@ -85,7 +85,4 @@ public class Dish {
         return "Dish [typeOfMenu=" + typeOfMenu + ", currency=" + currency + ", price=" + price + ", name=" + name
                 + ", temperature=" + temperature + ", weigh=" + weigh + ", levelOfSpicy=" + levelOfSpicy + "]";
     }
-    
-    
-
 }

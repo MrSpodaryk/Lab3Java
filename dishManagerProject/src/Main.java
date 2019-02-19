@@ -12,36 +12,34 @@ import ua.lviv.iot.dish.models.TypeOfMenu;
 
 public class Main {
 
-    public Main() {
-    }
-
     public static void main(String[] args) {
 
         DishManager manager1 = new DishManager();
-        
-        Pizza peperoni = new Pizza(TypeOfMenu.CHILD_MENU, "грн", 200, "Peperoni", Temperature.HOT, 450,
-                LevelOfSpicy.LOW);
 
-        Pizza diablo = new Pizza(TypeOfMenu.STANDART_MENU, "грн", 250, "Diablo", Temperature.HOT, 420,
-                LevelOfSpicy.EXTREME);
+        Pizza peperoni = new Pizza(TypeOfMenu.CHILD_MENU, "грн", 200,
+                "Peperoni", Temperature.HOT, 450, LevelOfSpicy.LOW);
 
-        Sushi nori = new Sushi(TypeOfMenu.STANDART_MENU, "грн", 150, "Nori", Temperature.COLD, 120,
-                LevelOfSpicy.NOT_SPICY);
+        Pizza diablo = new Pizza(TypeOfMenu.STANDART_MENU, "грн", 250, "Diablo",
+                Temperature.HOT, 420, LevelOfSpicy.EXTREME);
 
-        Sushi california = new Sushi(TypeOfMenu.STANDART_MENU, "грн", 150, "California", Temperature.COLD, 320,
-                LevelOfSpicy.NOT_SPICY);
+        Sushi nori = new Sushi(TypeOfMenu.STANDART_MENU, "грн", 150, "Nori",
+                Temperature.COLD, 120, LevelOfSpicy.NOT_SPICY);
+
+        Sushi california = new Sushi(TypeOfMenu.STANDART_MENU, "грн", 150,
+                "California", Temperature.COLD, 320, LevelOfSpicy.NOT_SPICY);
 
         Drinks milk = new Drinks();
         milk.setName("Milk");
         milk.setLevelOfSpicy(LevelOfSpicy.NOT_SPICY);
-        milk.setCapacity(100.0);
+        milk.setCurrency("грн");
         milk.setPresenceOfCaffeine(false);
         milk.setTypeOfMenu(TypeOfMenu.CHILD_MENU);
         milk.setTemperature(Temperature.NORMAL);
         milk.setPresenceOfLactose(true);
         milk.setWeigh(212);
+        milk.setCapacity(213.0);
         milk.setPrice(50);
-        milk.setCurrency("грн");
+        
 
         List<Dish> newDishList = new ArrayList<>();
         newDishList.add(peperoni);
@@ -50,17 +48,30 @@ public class Main {
         newDishList.add(california);
         newDishList.add(milk);
 
+        System.out.println(manager1
+                .findDishByTypeOfMenu(newDishList, TypeOfMenu.CHILD_MENU)
+                .toString());
         
-        System.out.println(manager1.findDishByTypeOfMenu(newDishList, TypeOfMenu.CHILD_MENU).toString());
-        System.out.println(manager1.findDishByTypeOfMenu(newDishList, TypeOfMenu.STANDART_MENU).toString());
+        System.out.println(manager1
+                .findDishByTypeOfMenu(newDishList, TypeOfMenu.STANDART_MENU)
+                .toString());
+        
         System.out.println();
 
-        System.out.println(manager1.sortDishByIncreasePrice(newDishList).toString());
-        System.out.println(manager1.sortDishByDecreasePrice(newDishList).toString());
+        System.out.println(
+                manager1.sortDishByIncreasePrice(newDishList).toString());
+        
+        System.out.println(
+                manager1.sortDishByDecreasePrice(newDishList).toString());
+        
         System.out.println();
 
-        System.out.println(manager1.sortDishByIncreaseWeigh(newDishList).toString());
-        System.out.println(manager1.sortDishByDecreaseWeigh(newDishList).toString());
+        System.out.println(
+                manager1.sortDishByIncreaseWeigh(newDishList).toString());
+        
+        System.out.println(
+                manager1.sortDishByDecreaseWeigh(newDishList).toString());
+        
         System.out.println();
     }
 }

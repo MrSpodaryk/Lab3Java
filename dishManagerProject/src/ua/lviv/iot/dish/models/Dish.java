@@ -13,8 +13,9 @@ public class Dish {
     public Dish() {
     }
 
-    public Dish(TypeOfMenu typeOfMenu, String currency, double price, String name, Temperature temperature,
-            double weigh, LevelOfSpicy levelOfSpicy) {
+    public Dish(TypeOfMenu typeOfMenu, String currency, double price,
+            String name, Temperature temperature, double weigh,
+            LevelOfSpicy levelOfSpicy) {
         this.typeOfMenu = typeOfMenu;
         this.currency = currency;
         this.price = price;
@@ -82,7 +83,9 @@ public class Dish {
 
     @Override
     public String toString() {
-        return "Dish [typeOfMenu=" + typeOfMenu + ", currency=" + currency + ", price=" + price + ", name=" + name
-                + ", temperature=" + temperature + ", weigh=" + weigh + ", levelOfSpicy=" + levelOfSpicy + "]";
+        return "Dish [typeOfMenu=" + typeOfMenu + ", currency=" + currency
+                + ", price=" + price + ", name=" + name + ", temperature="
+                + temperature + ", weigh=" + weigh + ", levelOfSpicy="
+                + levelOfSpicy + "]";
     }
 }

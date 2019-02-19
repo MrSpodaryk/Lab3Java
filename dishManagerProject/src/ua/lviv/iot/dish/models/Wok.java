@@ -9,9 +9,11 @@ public class Wok extends Dish {
     public Wok() {
     }
 
-    public Wok(TypeOfMenu typeOfMenu, String currency, double price, String name, Temperature temperature, double weigh,
+    public Wok(TypeOfMenu typeOfMenu, String currency, double price,
+            String name, Temperature temperature, double weigh,
             LevelOfSpicy levelOfSpicy) {
-        super(typeOfMenu, currency, price, name, temperature, weigh, levelOfSpicy);
+        super(typeOfMenu, currency, price, name, temperature, weigh,
+                levelOfSpicy);
     }
 
     public TypeOfNoodles getTypeOfNoodles() {
@@ -37,10 +39,12 @@ public class Wok extends Dish {
     public void setTypeOfSauce(TypeOfSauce typeOfSauce) {
         this.typeOfSauce = typeOfSauce;
     }
-    
+
     @Override
     public String toString() {
-        return "Wok [typeOfMenu=" + getTypeOfMenu() + ", currency=" + getCurrency() + ", price=" + getPrice() + ", name=" + getName()
-        + ", temperature=" + getTemperature() + ", weigh=" + getWeigh() + ", levelOfSpicy=" + getLevelOfSpicy() + "]";
+        return "Wok [typeOfMenu=" + getTypeOfMenu() + ", currency="
+                + getCurrency() + ", price=" + getPrice() + ", name="
+                + getName() + ", temperature=" + getTemperature() + ", weigh="
+                + getWeigh() + ", levelOfSpicy=" + getLevelOfSpicy() + "]";
     }
 }

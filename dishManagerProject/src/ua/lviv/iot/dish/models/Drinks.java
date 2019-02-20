@@ -9,9 +9,11 @@ public class Drinks extends Dish {
     public Drinks() {
     }
 
-    public Drinks(TypeOfMenu typeOfMenu, String currency, double price, String name, Temperature temperature,
-            double weigh, LevelOfSpicy levelOfSpicy) {
-        super(typeOfMenu, currency, price, name, temperature, weigh, levelOfSpicy);
+    public Drinks(TypeOfMenu typeOfMenu, String currency, double price,
+            String name, Temperature temperature, double weigh,
+            LevelOfSpicy levelOfSpicy) {
+        super(typeOfMenu, currency, price, name, temperature, weigh,
+                levelOfSpicy);
     }
 
     public double getCapacity() {
@@ -40,7 +42,9 @@ public class Drinks extends Dish {
 
     @Override
     public String toString() {
-        return "Drinks [typeOfMenu=" + getTypeOfMenu() + ", currency=" + getCurrency() + ", price=" + getPrice() + ", name=" + getName()
-                + ", temperature=" + getTemperature() + ", weigh=" + getWeigh() + ", levelOfSpicy=" + getLevelOfSpicy() + "]";
+        return "Drinks [typeOfMenu=" + getTypeOfMenu() + ", currency="
+                + getCurrency() + ", price=" + getPrice() + ", name="
+                + getName() + ", temperature=" + getTemperature() + ", weigh="
+                + getWeigh() + ", levelOfSpicy=" + getLevelOfSpicy() + "]";
     }
 }

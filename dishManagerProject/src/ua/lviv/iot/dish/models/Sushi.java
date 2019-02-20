@@ -3,13 +3,15 @@ package ua.lviv.iot.dish.models;
 public class Sushi extends Dish {
 
     private int numberOfSushi;
-    
+
     public Sushi() {
     }
 
-    public Sushi(TypeOfMenu typeOfMenu, String currency, double price, String name, Temperature temperature,
-            double weigh, LevelOfSpicy levelOfSpicy) {
-        super(typeOfMenu, currency, price, name, temperature, weigh, levelOfSpicy);
+    public Sushi(TypeOfMenu typeOfMenu, String currency, double price,
+            String name, Temperature temperature, double weigh,
+            LevelOfSpicy levelOfSpicy) {
+        super(typeOfMenu, currency, price, name, temperature, weigh,
+                levelOfSpicy);
     }
 
     public int getNumberOfSushi() {
@@ -22,7 +24,9 @@ public class Sushi extends Dish {
 
     @Override
     public String toString() {
-        return "Sushi [typeOfMenu=" + getTypeOfMenu() + ", currency=" + getCurrency() + ", price=" + getPrice() + ", name=" + getName()
-        + ", temperature=" + getTemperature() + ", weigh=" + getWeigh() + ", levelOfSpicy=" + getLevelOfSpicy() + "]";
+        return "Sushi [typeOfMenu=" + getTypeOfMenu() + ", currency="
+                + getCurrency() + ", price=" + getPrice() + ", name="
+                + getName() + ", temperature=" + getTemperature() + ", weigh="
+                + getWeigh() + ", levelOfSpicy=" + getLevelOfSpicy() + "]";
     }
 }

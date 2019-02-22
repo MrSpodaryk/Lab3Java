@@ -5,7 +5,11 @@ target/
 target/*
 target
 /target
-    
+/.classpath
+/*.project
+/.settings
+/*.springBeans  
+
 .project
     
 .classpath

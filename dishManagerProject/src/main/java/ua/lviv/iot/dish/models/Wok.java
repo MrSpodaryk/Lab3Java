@@ -1,4 +1,4 @@
-package ua.lviv.iot.dish.models;
+ package ua.lviv.iot.dish.models;
 
 public class Wok extends Dish {
 

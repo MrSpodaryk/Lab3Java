@@ -2,14 +2,11 @@ package ua.lviv.iot.dish.managers;
 
 import java.util.List;
 import java.util.stream.Collectors;
-import java.util.ArrayList;
-import java.util.LinkedList;
 
-import ua.lviv.iot.dish.models.*;
+import ua.lviv.iot.dish.models.Dish;
+import ua.lviv.iot.dish.models.TypeOfMenu;
 
 public class DishManager {
-
-    private List<Dish> dishes = new LinkedList<>();
 
     public DishManager() {
     }

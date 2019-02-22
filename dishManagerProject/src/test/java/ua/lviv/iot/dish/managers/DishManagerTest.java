@@ -3,7 +3,6 @@ package ua.lviv.iot.dish.managers;
 import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
 
 import org.junit.jupiter.api.Assertions;
@@ -33,18 +32,13 @@ class DishManagerTest {
 		dishes.add(new Pizza(TypeOfMenu.STANDART_MENU, "грн", 250, "Diablo", Temperature.HOT, 420, LevelOfSpicy.EXTREME));
 		dishes.add(new Sushi(TypeOfMenu.STANDART_MENU, "грн", 120, "Nori", Temperature.COLD, 120, LevelOfSpicy.NOT_SPICY));   
 		dishes.add(new Sushi(TypeOfMenu.STANDART_MENU, "грн", 150, "California", Temperature.COLD, 320, LevelOfSpicy.NOT_SPICY));
-	}
-	
-	
-	
+	}	
 	
 	@Test
 	void testFindDishByTypeOfMenu() {
 		Assertions.assertEquals(1, dishManager.findDishByTypeOfMenu(dishes, TypeOfMenu.CHILD_MENU).size());
 		Assertions.assertEquals(3, dishManager.findDishByTypeOfMenu(dishes, TypeOfMenu.STANDART_MENU).size());
 	}
-	
-
 
     @Test
     void testSortDishByIncreasePrice() {
@@ -95,5 +89,4 @@ class DishManagerTest {
 			dishes2.get(i).toString();
 		}
     }
-
 }

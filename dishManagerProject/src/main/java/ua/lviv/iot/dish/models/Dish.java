@@ -1,5 +1,7 @@
 package ua.lviv.iot.dish.models;
 
+
+
 public class Dish {
 
     private TypeOfMenu typeOfMenu;

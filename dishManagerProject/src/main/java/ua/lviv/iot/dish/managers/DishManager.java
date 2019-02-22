@@ -3,18 +3,15 @@ package ua.lviv.iot.dish.managers;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.ArrayList;
+import java.util.LinkedList;
 
 import ua.lviv.iot.dish.models.*;
 
 public class DishManager {
 
-    private List<Dish> dishes = new ArrayList<>();
+    private List<Dish> dishes = new LinkedList<>();
 
     public DishManager() {
-    }
-
-    public DishManager(List<Dish> dishes) {
-        this.dishes = dishes;
     }
 
     public List<Dish> findDishByTypeOfMenu(List<Dish> dishes,
@@ -44,4 +41,5 @@ public class DishManager {
         dishes.sort((o1, o2) -> (int) o2.getWeigh() - (int) o1.getWeigh());
         return dishes;
     }
+    
 }

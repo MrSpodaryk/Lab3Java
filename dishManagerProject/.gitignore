@@ -5,6 +5,8 @@ target/
 target/*
 target
 /target
+*.project
+*.classpath
 
 # Log file
 *.log

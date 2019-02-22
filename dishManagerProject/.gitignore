@@ -5,8 +5,12 @@ target/
 target/*
 target
 /target
-*.project
-*.classpath
+
+# Eclipse Core      
+.project
+
+# JDT-specific (Eclipse Java Development Tools)     
+.classpath
 
 # Log file
 *.log

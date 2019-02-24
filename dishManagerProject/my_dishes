@@ -1,0 +1,4 @@
+Dish [typeOfMenu=CHILD_MENU, currency=грн, price=200.0, name=Peperoni, temperature=HOT, weigh=450.0, levelOfSpicy=LOW], size=null, styleOfDough=null
+Dish [typeOfMenu=STANDART_MENU, currency=грн, price=250.0, name=Diablo, temperature=HOT, weigh=420.0, levelOfSpicy=EXTREME], size=null, styleOfDough=null
+Dish [typeOfMenu=STANDART_MENU, currency=грн, price=120.0, name=Nori, temperature=COLD, weigh=120.0, levelOfSpicy=NOT_SPICY], numberOfSushi=0
+Dish [typeOfMenu=STANDART_MENU, currency=грн, price=150.0, name=California, temperature=COLD, weigh=320.0, levelOfSpicy=NOT_SPICY], numberOfSushi=0

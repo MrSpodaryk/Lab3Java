@@ -2,49 +2,53 @@ package ua.lviv.iot.dish.models;
 
 public class Drinks extends Dish {
 
-    private double capacity;
-    private boolean presenceOfCaffeine;
-    private boolean presenceOfLactose;
+	private double capacity;
+	private boolean presenceOfCaffeine;
+	private boolean presenceOfLactose;
 
-    public Drinks() {
-    }
+	public Drinks() {
+	}
 
-    public Drinks(TypeOfMenu typeOfMenu, String currency, double price,
-            String name, Temperature temperature, double weigh,
-            LevelOfSpicy levelOfSpicy) {
-        super(typeOfMenu, currency, price, name, temperature, weigh,
-                levelOfSpicy);
-    }
+	public Drinks(TypeOfMenu typeOfMenu, String currency, double price, String name, Temperature temperature,
+			double weigh, LevelOfSpicy levelOfSpicy) {
+		super(typeOfMenu, currency, price, name, temperature, weigh, levelOfSpicy);
+	}
 
-    public double getCapacity() {
-        return capacity;
-    }
+	public double getCapacity() {
+		return capacity;
+	}
 
-    public void setCapacity(double capacity) {
-        this.capacity = capacity;
-    }
+	public void setCapacity(double capacity) {
+		this.capacity = capacity;
+	}
 
-    public boolean isPresenceOfCaffeine() {
-        return presenceOfCaffeine;
-    }
+	public boolean isPresenceOfCaffeine() {
+		return presenceOfCaffeine;
+	}
 
-    public void setPresenceOfCaffeine(boolean presenceOfCaffeine) {
-        this.presenceOfCaffeine = presenceOfCaffeine;
-    }
+	public void setPresenceOfCaffeine(boolean presenceOfCaffeine) {
+		this.presenceOfCaffeine = presenceOfCaffeine;
+	}
 
-    public boolean isPresenceOfLactose() {
-        return presenceOfLactose;
-    }
+	public boolean isPresenceOfLactose() {
+		return presenceOfLactose;
+	}
 
-    public void setPresenceOfLactose(boolean presenceOfLactose) {
-        this.presenceOfLactose = presenceOfLactose;
-    }
+	public void setPresenceOfLactose(boolean presenceOfLactose) {
+		this.presenceOfLactose = presenceOfLactose;
+	}
 
-    @Override
-    public String toString() {
-        return "Drinks [typeOfMenu=" + getTypeOfMenu() + ", currency="
-                + getCurrency() + ", price=" + getPrice() + ", name="
-                + getName() + ", temperature=" + getTemperature() + ", weigh="
-                + getWeigh() + ", levelOfSpicy=" + getLevelOfSpicy() + "]";
-    }
+	@Override
+	public String toString() {
+		return super.toString() + ", capacity=" + capacity + ", presenceOfCaffeine=" + presenceOfCaffeine
+				+ ", presenceOfLactose=" + presenceOfLactose;
+	}
+
+	public String getHeaders() {
+		return super.getHeaders() + ", " + "capacity, presenceOfCaffeine, presenceOfLactose";
+	}
+
+	public String toCSV() {
+		return super.toCSV() + capacity + ", " + presenceOfCaffeine + ", " + presenceOfLactose;
+	}
 }

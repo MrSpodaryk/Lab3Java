@@ -2,41 +2,44 @@ package ua.lviv.iot.dish.models;
 
 public class Pizza extends Dish {
 
-    private Size size;
+	private Size size;
 
-    private StyleOfDough styleOfDough;
+	private StyleOfDough styleOfDough;
 
-    public Pizza() {
-    }
-    
-    public Pizza(TypeOfMenu typeOfMenu, String currency, double price,
-            String name, Temperature temperature, double weigh,
-            LevelOfSpicy levelOfSpicy) {
-        super(typeOfMenu, currency, price, name, temperature, weigh,
-                levelOfSpicy);
-    }
+	public Pizza() {
+	}
 
-    public Size getSize() {
-        return size;
-    }
+	public Pizza(TypeOfMenu typeOfMenu, String currency, double price, String name, Temperature temperature,
+			double weigh, LevelOfSpicy levelOfSpicy) {
+		super(typeOfMenu, currency, price, name, temperature, weigh, levelOfSpicy);
+	}
 
-    public void setSize(Size size) {
-        this.size = size;
-    }
+	public Size getSize() {
+		return size;
+	}
 
-    public StyleOfDough getStyleOfDough() {
-        return styleOfDough;
-    }
+	public void setSize(Size size) {
+		this.size = size;
+	}
 
-    public void setStyleOfDough(StyleOfDough styleOfDough) {
-        this.styleOfDough = styleOfDough;
-    }
+	public StyleOfDough getStyleOfDough() {
+		return styleOfDough;
+	}
 
-    @Override
-    public String toString() {
-        return "Pizza [typeOfMenu=" + getTypeOfMenu() + ", currency="
-                + getCurrency() + ", price=" + getPrice() + ", name="
-                + getName() + ", temperature=" + getTemperature() + ", weigh="
-                + getWeigh() + ", levelOfSpicy=" + getLevelOfSpicy() + "]";
-    }
+	public void setStyleOfDough(StyleOfDough styleOfDough) {
+		this.styleOfDough = styleOfDough;
+	}
+
+	@Override
+	public String toString() {
+		return super.toString() + ", size=" + size + ", styleOfDough=" + styleOfDough;
+	}
+
+	public String getHeaders() {
+		return super.getHeaders() + ", " + "size, styleOfDough";
+	}
+
+	public String toCSV() {
+		return super.toCSV() + size + ", " + styleOfDough;
+	}
 }

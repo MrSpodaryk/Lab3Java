@@ -2,49 +2,52 @@ package ua.lviv.iot.dish.models;
 
 public class Wok extends Dish {
 
-    private TypeOfNoodles typeOfNoodles;
-    private TypeOfMeat typeOfMeat;
-    private TypeOfSauce typeOfSauce;
+	private TypeOfNoodles typeOfNoodles;
+	private TypeOfMeat typeOfMeat;
+	private TypeOfSauce typeOfSauce;
 
-    public Wok() {
-    }
+	public Wok() {
+	}
 
-    public Wok(TypeOfMenu typeOfMenu, String currency, double price,
-            String name, Temperature temperature, double weigh,
-            LevelOfSpicy levelOfSpicy) {
-        super(typeOfMenu, currency, price, name, temperature, weigh,
-                levelOfSpicy);
-    }
+	public Wok(TypeOfMenu typeOfMenu, String currency, double price, String name, Temperature temperature, double weigh,
+			LevelOfSpicy levelOfSpicy) {
+		super(typeOfMenu, currency, price, name, temperature, weigh, levelOfSpicy);
+	}
 
-    public TypeOfNoodles getTypeOfNoodles() {
-        return typeOfNoodles;
-    }
+	public TypeOfNoodles getTypeOfNoodles() {
+		return typeOfNoodles;
+	}
 
-    public void setTypeOfNoodles(TypeOfNoodles typeOfNoodles) {
-        this.typeOfNoodles = typeOfNoodles;
-    }
+	public void setTypeOfNoodles(TypeOfNoodles typeOfNoodles) {
+		this.typeOfNoodles = typeOfNoodles;
+	}
 
-    public TypeOfMeat getTypeOfMeat() {
-        return typeOfMeat;
-    }
+	public TypeOfMeat getTypeOfMeat() {
+		return typeOfMeat;
+	}
 
-    public void setTypeOfMeat(TypeOfMeat typeOfMeat) {
-        this.typeOfMeat = typeOfMeat;
-    }
+	public void setTypeOfMeat(TypeOfMeat typeOfMeat) {
+		this.typeOfMeat = typeOfMeat;
+	}
 
-    public TypeOfSauce getTypeOfSauce() {
-        return typeOfSauce;
-    }
+	public TypeOfSauce getTypeOfSauce() {
+		return typeOfSauce;
+	}
 
-    public void setTypeOfSauce(TypeOfSauce typeOfSauce) {
-        this.typeOfSauce = typeOfSauce;
-    }
+	public void setTypeOfSauce(TypeOfSauce typeOfSauce) {
+		this.typeOfSauce = typeOfSauce;
+	}
 
-    @Override
-    public String toString() {
-        return "Wok [typeOfMenu=" + getTypeOfMenu() + ", currency="
-                + getCurrency() + ", price=" + getPrice() + ", name="
-                + getName() + ", temperature=" + getTemperature() + ", weigh="
-                + getWeigh() + ", levelOfSpicy=" + getLevelOfSpicy() + "]";
-    }
+	@Override
+	public String toString() {
+		return super.toString() + ", typeOfNoodles=" + typeOfNoodles + ", typeOfMeat=" + ", typeOfSauce" + typeOfSauce;
+	}
+
+	public String getHeaders() {
+		return super.getHeaders() + ", " + "typeOfNoodles, typeOfMeat, typeOfSauce";
+	}
+
+	public String toCSV() {
+		return super.toCSV() + typeOfNoodles + ", " + typeOfMeat + ", " + typeOfSauce;
+	}
 }

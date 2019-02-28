@@ -20,24 +20,27 @@ import ua.lviv.iot.dish.models.TypeOfMenu;
 
 class DishWriterTest {
 
-	private List<Dish> dishes = new ArrayList<>();
-	private DishWriter dishWriter = new DishWriter();
+    private List<Dish> dishes = new ArrayList<>();
+    private DishWriter dishWriter = new DishWriter();
 
-	@BeforeEach
-	public void setUp() {
+    @BeforeEach
+    public void setUp() {
 
-		dishes.add(new Pizza(TypeOfMenu.CHILD_MENU, "грн", 200, "Peperoni", Temperature.HOT, 450, LevelOfSpicy.LOW));
-		dishes.add(new Pizza(TypeOfMenu.STANDART_MENU, "грн", 250, "Diablo", Temperature.HOT, 420, LevelOfSpicy.EXTREME));
-		dishes.add(new Sushi(TypeOfMenu.STANDART_MENU, "грн", 120, "Nori", Temperature.COLD, 120, LevelOfSpicy.NOT_SPICY));
-		dishes.add(new Sushi(TypeOfMenu.STANDART_MENU, "грн", 150, "California", Temperature.COLD, 320,
-				LevelOfSpicy.NOT_SPICY));
-	}
+        dishes.add(new Pizza(TypeOfMenu.CHILD_MENU, "грн", 200, "Peperoni",
+                Temperature.HOT, 450, LevelOfSpicy.LOW));
+        dishes.add(new Pizza(TypeOfMenu.STANDART_MENU, "грн", 250, "Diablo",
+                Temperature.HOT, 420, LevelOfSpicy.EXTREME));
+        dishes.add(new Sushi(TypeOfMenu.STANDART_MENU, "грн", 120, "Nori",
+                Temperature.COLD, 120, LevelOfSpicy.NOT_SPICY));
+        dishes.add(new Sushi(TypeOfMenu.STANDART_MENU, "грн", 150, "California",
+                Temperature.COLD, 320, LevelOfSpicy.NOT_SPICY));
+    }
 
-	@Test
-	void test() throws IOException {
-		File myFile = new File("my_dishes");
-		dishWriter.writeToFile(dishes);
-		Assertions.assertTrue(myFile.length() > 0);
-	}
+    @Test
+    void test() throws IOException {
+        File myFile = new File("my_dishes");
+        dishWriter.writeToFile(dishes);
+        Assertions.assertTrue(myFile.length() > 0);
+    }
 
 }

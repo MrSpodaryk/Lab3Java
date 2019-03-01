@@ -16,35 +16,44 @@ public class Drinks extends Dish {
                 levelOfSpicy);
     }
 
-    public double getCapacity() {
+    public final double getCapacity() {
         return capacity;
     }
 
-    public void setCapacity(double capacity) {
+    public final void setCapacity(double capacity) {
         this.capacity = capacity;
     }
 
-    public boolean isPresenceOfCaffeine() {
+    public final boolean isPresenceOfCaffeine() {
         return presenceOfCaffeine;
     }
 
-    public void setPresenceOfCaffeine(boolean presenceOfCaffeine) {
+    public final void setPresenceOfCaffeine(boolean presenceOfCaffeine) {
         this.presenceOfCaffeine = presenceOfCaffeine;
     }
 
-    public boolean isPresenceOfLactose() {
+    public final boolean isPresenceOfLactose() {
         return presenceOfLactose;
     }
 
-    public void setPresenceOfLactose(boolean presenceOfLactose) {
+    public final void setPresenceOfLactose(boolean presenceOfLactose) {
         this.presenceOfLactose = presenceOfLactose;
     }
 
     @Override
-    public String toString() {
-        return "Drinks [typeOfMenu=" + getTypeOfMenu() + ", currency="
-                + getCurrency() + ", price=" + getPrice() + ", name="
-                + getName() + ", temperature=" + getTemperature() + ", weigh="
-                + getWeigh() + ", levelOfSpicy=" + getLevelOfSpicy() + "]";
+    public final String toString() {
+        return super.toString() + ", capacity=" + capacity
+                + ", presenceOfCaffeine=" + presenceOfCaffeine
+                + ", presenceOfLactose=" + presenceOfLactose;
+    }
+
+    public final String getHeaders() {
+        return super.getHeaders() + ", "
+                + "capacity, presenceOfCaffeine, presenceOfLactose";
+    }
+
+    public final String toCSV() {
+        return super.toCSV() + capacity + ", " + presenceOfCaffeine + ", "
+                + presenceOfLactose;
     }
 }

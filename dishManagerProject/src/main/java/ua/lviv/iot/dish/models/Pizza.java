@@ -8,7 +8,7 @@ public class Pizza extends Dish {
 
     public Pizza() {
     }
-    
+
     public Pizza(TypeOfMenu typeOfMenu, String currency, double price,
             String name, Temperature temperature, double weigh,
             LevelOfSpicy levelOfSpicy) {
@@ -16,27 +16,33 @@ public class Pizza extends Dish {
                 levelOfSpicy);
     }
 
-    public Size getSize() {
+    public final Size getSize() {
         return size;
     }
 
-    public void setSize(Size size) {
+    public final void setSize(Size size) {
         this.size = size;
     }
 
-    public StyleOfDough getStyleOfDough() {
+    public final StyleOfDough getStyleOfDough() {
         return styleOfDough;
     }
 
-    public void setStyleOfDough(StyleOfDough styleOfDough) {
+    public final void setStyleOfDough(StyleOfDough styleOfDough) {
         this.styleOfDough = styleOfDough;
     }
 
     @Override
-    public String toString() {
-        return "Pizza [typeOfMenu=" + getTypeOfMenu() + ", currency="
-                + getCurrency() + ", price=" + getPrice() + ", name="
-                + getName() + ", temperature=" + getTemperature() + ", weigh="
-                + getWeigh() + ", levelOfSpicy=" + getLevelOfSpicy() + "]";
+    public final String toString() {
+        return super.toString() + ", size=" + size + ", styleOfDough="
+                + styleOfDough;
+    }
+
+    public final String getHeaders() {
+        return super.getHeaders() + ", " + "size, styleOfDough";
+    }
+
+    public final String toCSV() {
+        return super.toCSV() + size + ", " + styleOfDough;
     }
 }

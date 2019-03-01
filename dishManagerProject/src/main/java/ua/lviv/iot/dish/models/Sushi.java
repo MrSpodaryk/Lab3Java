@@ -14,19 +14,24 @@ public class Sushi extends Dish {
                 levelOfSpicy);
     }
 
-    public int getNumberOfSushi() {
+    public final int getNumberOfSushi() {
         return numberOfSushi;
     }
 
-    public void setNumberOfSushi(int numberOfSushi) {
+    public final void setNumberOfSushi(int numberOfSushi) {
         this.numberOfSushi = numberOfSushi;
     }
 
     @Override
-    public String toString() {
-        return "Sushi [typeOfMenu=" + getTypeOfMenu() + ", currency="
-                + getCurrency() + ", price=" + getPrice() + ", name="
-                + getName() + ", temperature=" + getTemperature() + ", weigh="
-                + getWeigh() + ", levelOfSpicy=" + getLevelOfSpicy() + "]";
+    public final String toString() {
+        return super.toString() + ", numberOfSushi=" + numberOfSushi;
+    }
+
+    public final String getHeaders() {
+        return super.getHeaders() + ", " + "numberOfSushi";
+    }
+
+    public final String toCSV() {
+        return super.toCSV() + numberOfSushi;
     }
 }

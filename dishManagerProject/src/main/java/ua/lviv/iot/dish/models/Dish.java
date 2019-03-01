@@ -1,7 +1,5 @@
 package ua.lviv.iot.dish.models;
 
-
-
 public class Dish {
 
     private TypeOfMenu typeOfMenu;
@@ -27,59 +25,59 @@ public class Dish {
         this.levelOfSpicy = levelOfSpicy;
     }
 
-    public TypeOfMenu getTypeOfMenu() {
+    public final TypeOfMenu getTypeOfMenu() {
         return typeOfMenu;
     }
 
-    public void setTypeOfMenu(TypeOfMenu typeOfMenu) {
+    public final void setTypeOfMenu(TypeOfMenu typeOfMenu) {
         this.typeOfMenu = typeOfMenu;
     }
 
-    public String getCurrency() {
+    public final String getCurrency() {
         return currency;
     }
 
-    public void setCurrency(String currency) {
+    public final void setCurrency(String currency) {
         this.currency = currency;
     }
 
-    public double getPrice() {
+    public final double getPrice() {
         return price;
     }
 
-    public void setPrice(double price) {
+    public final void setPrice(double price) {
         this.price = price;
     }
 
-    public String getName() {
+    public final String getName() {
         return name;
     }
 
-    public void setName(String name) {
+    public final void setName(String name) {
         this.name = name;
     }
 
-    public Temperature getTemperature() {
+    public final Temperature getTemperature() {
         return temperature;
     }
 
-    public void setTemperature(Temperature temperature) {
+    public final void setTemperature(Temperature temperature) {
         this.temperature = temperature;
     }
 
-    public double getWeigh() {
+    public final double getWeigh() {
         return weigh;
     }
 
-    public void setWeigh(double weigh) {
+    public final void setWeigh(double weigh) {
         this.weigh = weigh;
     }
 
-    public LevelOfSpicy getLevelOfSpicy() {
+    public final LevelOfSpicy getLevelOfSpicy() {
         return levelOfSpicy;
     }
 
-    public void setLevelOfSpicy(LevelOfSpicy levelOfSpicy) {
+    public final void setLevelOfSpicy(LevelOfSpicy levelOfSpicy) {
         this.levelOfSpicy = levelOfSpicy;
     }
 
@@ -89,5 +87,14 @@ public class Dish {
                 + ", price=" + price + ", name=" + name + ", temperature="
                 + temperature + ", weigh=" + weigh + ", levelOfSpicy="
                 + levelOfSpicy + "]";
+    }
+
+    public String getHeaders() {
+        return "typeOfMenu, currency, price, name, temperature, weigh, levelOfSpicy";
+    }
+
+    public String toCSV() {
+        return typeOfMenu + ", " + currency + ", " + price + ", " + name + ", "
+                + temperature + ", " + weigh + ", " + levelOfSpicy;
     }
 }

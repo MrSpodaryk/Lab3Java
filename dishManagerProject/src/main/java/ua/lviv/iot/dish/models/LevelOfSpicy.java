@@ -5,6 +5,6 @@ public enum LevelOfSpicy {
     LOW,
     NORMAL,
     HIGH,
-    EXTREME,
-    DANGEROUS;
+	EXTREME,
+	DANGEROUS;
 }

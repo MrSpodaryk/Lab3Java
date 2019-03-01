@@ -16,35 +16,43 @@ public class Wok extends Dish {
                 levelOfSpicy);
     }
 
-    public TypeOfNoodles getTypeOfNoodles() {
+    public final TypeOfNoodles getTypeOfNoodles() {
         return typeOfNoodles;
     }
 
-    public void setTypeOfNoodles(TypeOfNoodles typeOfNoodles) {
+    public final void setTypeOfNoodles(TypeOfNoodles typeOfNoodles) {
         this.typeOfNoodles = typeOfNoodles;
     }
 
-    public TypeOfMeat getTypeOfMeat() {
+    public final TypeOfMeat getTypeOfMeat() {
         return typeOfMeat;
     }
 
-    public void setTypeOfMeat(TypeOfMeat typeOfMeat) {
+    public final void setTypeOfMeat(TypeOfMeat typeOfMeat) {
         this.typeOfMeat = typeOfMeat;
     }
 
-    public TypeOfSauce getTypeOfSauce() {
+    public final TypeOfSauce getTypeOfSauce() {
         return typeOfSauce;
     }
 
-    public void setTypeOfSauce(TypeOfSauce typeOfSauce) {
+    public final void setTypeOfSauce(TypeOfSauce typeOfSauce) {
         this.typeOfSauce = typeOfSauce;
     }
 
     @Override
-    public String toString() {
-        return "Wok [typeOfMenu=" + getTypeOfMenu() + ", currency="
-                + getCurrency() + ", price=" + getPrice() + ", name="
-                + getName() + ", temperature=" + getTemperature() + ", weigh="
-                + getWeigh() + ", levelOfSpicy=" + getLevelOfSpicy() + "]";
+    public final String toString() {
+        return super.toString() + ", typeOfNoodles=" + typeOfNoodles
+                + ", typeOfMeat=" + ", typeOfSauce" + typeOfSauce;
+    }
+
+    public final String getHeaders() {
+        return super.getHeaders() + ", "
+                + "typeOfNoodles, typeOfMeat, typeOfSauce";
+    }
+
+    public final String toCSV() {
+        return super.toCSV() + typeOfNoodles + ", " + typeOfMeat + ", "
+                + typeOfSauce;
     }
 }

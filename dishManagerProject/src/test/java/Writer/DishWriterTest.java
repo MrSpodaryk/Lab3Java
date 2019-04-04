@@ -1,7 +1,5 @@
 package Writer;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -11,15 +9,15 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import ua.lviv.iot.dish.models.Dish;
 import ua.lviv.iot.dish.models.LevelOfSpicy;
 import ua.lviv.iot.dish.models.Pizza;
 import ua.lviv.iot.dish.models.Sushi;
 import ua.lviv.iot.dish.models.Temperature;
 import ua.lviv.iot.dish.models.TypeOfMenu;
+import ua.lviv.iot.testdb.Dish;
 
 class DishWriterTest {
-
+    
     private List<Dish> dishes = new ArrayList<>();
     private DishWriter dishWriter = new DishWriter();
 

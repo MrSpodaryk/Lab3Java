@@ -1,5 +1,7 @@
 package ua.lviv.iot.dish.models;
 
+import ua.lviv.iot.testdb.Dish;
+
 public class Wok extends Dish {
 
     private TypeOfNoodles typeOfNoodles;

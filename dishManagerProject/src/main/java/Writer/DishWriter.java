@@ -7,7 +7,8 @@ import java.io.IOException;
 import java.io.OutputStreamWriter;
 import java.util.List;
 
-import ua.lviv.iot.dish.models.Dish;
+import ua.lviv.iot.testdb.Dish;
+
 
 public class DishWriter {
 
@@ -18,17 +19,16 @@ public class DishWriter {
 
         File myFile = new File("my_dishes");
 
-        try (FileOutputStream fos = new FileOutputStream(myFile); // відкриває потік
-                OutputStreamWriter osw = new OutputStreamWriter(fos); // трансформує текст вбайти
-                BufferedWriter bufWriter = new BufferedWriter(osw);) { // буферизує текст
+        try (FileOutputStream fos = new FileOutputStream(myFile); 
+                OutputStreamWriter osw = new OutputStreamWriter(fos); 
+                BufferedWriter bufWriter = new BufferedWriter(osw);) { 
 
-            for (int index = 0; index < dishes.size(); index++) {
-                bufWriter.write(dishes.get(index).toString());
+            for (Dish dish : dishes) {
+                bufWriter.write(dish.toString());
                 bufWriter.newLine();
             }
 
-        } finally {
-
-        }
+        
     }
+  }
 }

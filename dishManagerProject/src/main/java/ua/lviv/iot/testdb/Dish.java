@@ -1,7 +1,23 @@
-package ua.lviv.iot.dish.models;
+package ua.lviv.iot.testdb;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+import ua.lviv.iot.dish.models.LevelOfSpicy;
+import ua.lviv.iot.dish.models.Temperature;
+import ua.lviv.iot.dish.models.TypeOfMenu;
+
+
+
+@Entity
 public class Dish {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Integer id;
+    
     private TypeOfMenu typeOfMenu;
     private String currency;
     private double price;
@@ -23,6 +39,14 @@ public class Dish {
         this.temperature = temperature;
         this.weigh = weigh;
         this.levelOfSpicy = levelOfSpicy;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public final TypeOfMenu getTypeOfMenu() {
@@ -80,7 +104,7 @@ public class Dish {
     public final void setLevelOfSpicy(LevelOfSpicy levelOfSpicy) {
         this.levelOfSpicy = levelOfSpicy;
     }
-
+    
     @Override
     public String toString() {
         return "Dish [typeOfMenu=" + typeOfMenu + ", currency=" + currency

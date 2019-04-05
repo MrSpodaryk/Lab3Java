@@ -1,5 +1,7 @@
 package ua.lviv.iot.dish.models;
 
+import ua.lviv.iot.testdb.Dish;
+
 public class Sushi extends Dish {
 
     private int numberOfSushi;

@@ -3,8 +3,8 @@ package ua.lviv.iot.dish.managers;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import ua.lviv.iot.dish.models.Dish;
 import ua.lviv.iot.dish.models.TypeOfMenu;
+import ua.lviv.iot.testdb.Dish;
 
 public class DishManager {
 
